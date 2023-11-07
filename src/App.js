@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import React,{useState, useEffect} from 'react';
+import ArtCollection from './components/ArtCollection';
 
 function App() {
+  const[art, setArt]=useState([])
+
+  useEffect(() =>{
+    fetch("https://api.artic.edu/api/v1/artworks?limit=60")
+    .then(response =>response.json())
+    .then(data=>setArt(data.data))
+  })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ArtCollection art={art} />
     </div>
   );
 }
