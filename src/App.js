@@ -1,6 +1,7 @@
 import './App.css';
 import React,{useState, useEffect} from 'react';
 import ArtCollection from './components/ArtCollection';
+import NavBar from './components/NavBar';
 
 function App() {
   const[art, setArt]=useState([])
@@ -12,6 +13,7 @@ function App() {
   })
   return (
     <div className="App">
+      <NavBar />
       <ArtCollection art={art} />
     </div>
   );

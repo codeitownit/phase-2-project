@@ -17,7 +17,7 @@ function ArtCollection({art}) {
                 <CardGroup>
         {art.map((singleArt, index) => (
            <Col xs={6} md={3}>
-           <Card className="bot-card"style={{ width: '15rem', margin:'0'}}>
+           <Card className="bot-card"style={{ margin:'0'}}>
              <Card.Img variant="top" src={iiif_url + singleArt.image_id + "/full/843,/0/default.jpg"} alt="bot" />
              <Card.Body>
                <Card.Title>{singleArt.title}</Card.Title>
