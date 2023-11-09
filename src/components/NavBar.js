@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Search from './Search';
 
-function NavBar() {
+function NavBar({art, setSearch}) {
   return (
     <Navbar expand="lg" className=" navbar bg-body-tertiary" bg="dark" data-bs-theme="dark">
       <Container fluid>
@@ -28,7 +28,7 @@ function NavBar() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Search />
+          <Search art={art} setSearch={setSearch}/>
         </Navbar.Collapse>
       </Container>
     </Navbar>
