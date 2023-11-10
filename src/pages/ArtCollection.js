@@ -25,15 +25,9 @@ function ArtCollection({art, iiif_url}) {
              <Card.Body>
                <Card.Title>{singleArt.title}</Card.Title>
                <Card.Text>
-                gjj
+                {singleArt.artist_display}
                </Card.Text>
              </Card.Body>
-             {/* displays icons for health, damage and armor */}
-             <Card.Footer className='card-footer'>
-               <small className="text-muted"><i className="fa-solid fa-heart-pulse"></i></small>
-               <small className="text-muted"><i className="fa-solid fa-bolt"></i></small>
-               <small className="text-muted"><i className="fa-solid fa-shield-halved"></i></small>
-             </Card.Footer>
            </Card>
          </Col>
        ))}

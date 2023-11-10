@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 
 
 
-function Search({art, setSearch}) {
+function Search({setSearch}) {
   const[input, setInput]=useState("")
 
   return (

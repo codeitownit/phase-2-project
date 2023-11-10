@@ -16,6 +16,12 @@ code {
 img{
   width: 15rem;
 }
+hr{
+  width:70%;
+  align-items: center;
+  margin-left: 250px;
+  color:#868181;
+}
 .navbar {
   /* padding: 0 0 4.5rem; */
   /* align-items: center; */
@@ -41,4 +47,21 @@ img{
 .nav-link {
   font-size: 1.2rem;
   font-family: "Montserrat-Light";
+}
+.clicked-details{
+  margin-bottom: 100px;
+  
+}
+.img-container{
+  background-color: #e8e4e4;
+  margin-bottom: 50px;
+  padding: 2rem 0 5rem;
+}
+.clicked-img{
+  width: 30%;
+  height:5%;
+}
+.specs{
+  text-align: left;
+  padding: 0 20rem;
 }

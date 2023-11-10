@@ -15,7 +15,7 @@ function App() {
   const iiif_url = "https://www.artic.edu/iiif/2/";
 
   useEffect(() =>{
-    fetch(`https://api.artic.edu/api/v1/artworks/search?q=${search}&limit=60&fields=id,title,image_id`)
+    fetch(`https://api.artic.edu/api/v1/artworks/search?q=${search}&limit=60&fields=id,title,image_id,artist_display`)
     .then(response =>response.json())
     .then(data=>{
         setArt(data.data)
