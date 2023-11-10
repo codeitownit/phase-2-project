@@ -1,16 +1,16 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Search from './Search';
 import { Link } from "react-router-dom";
+
 
 function NavBar({art, setSearch}) {
   return (
     
     <Navbar expand="lg" className=" navbar bg-body-tertiary" bg="light" data-bs-theme="light">
       <Container fluid className='nav'>
-        <Navbar.Brand className='navbar-brand'href="#">Art Gallery</Navbar.Brand>
+        <Navbar.Brand className='navbar-brand'href="/">Art Gallery</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -18,18 +18,11 @@ function NavBar({art, setSearch}) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
+             &nbsp;
+            
             <Nav.Link as={Link} to="/" className='nav-link' >Home</Nav.Link>
-            <Nav.Link as={Link} to="/artworks" className='nav-link'>ArtWorks</Nav.Link>
-         
-            <NavDropdown className='nav-link'title="Categories" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link as={Link} to="/artworks" className='nav-link'>The Collection</Nav.Link>
+            <Nav.Link as={Link} to="/artworks" className='nav-link'>Exhibitions</Nav.Link>
           </Nav>
           <Search art={art} setSearch={setSearch}/>
         </Navbar.Collapse>

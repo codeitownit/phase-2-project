@@ -66,7 +66,7 @@ function Home() {
 </Container>
      </div>
      <div>
-     <Container>
+     <Container id="#artworks">
         <div style={{ display:'flex', justifyContent:'space-between'}}>
     <h2>Artworks</h2>
     <Link to="/artworks">Explore the collection <span aria-hidden="true">&nbsp;&nbsp;›</span></Link>
