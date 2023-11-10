@@ -1,17 +1,23 @@
 import React, {useState} from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import {useNavigate} from 'react-router-dom';
+
 
 
 
 function Search({setSearch}) {
   const[input, setInput]=useState("")
 
+  const navigate = useNavigate();
+
+
   return (
     <div>
         <Form className="d-flex"onSubmit={(e)=>{
     e.preventDefault()
     setSearch(input)
+    navigate(`/artworks`)
    
 }}>
             <Form.Control

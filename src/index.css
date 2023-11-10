@@ -12,6 +12,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+a{
+  text-decoration: none;
+  color: #171717;
+}
 
 img{
   width: 15rem;
@@ -64,4 +68,11 @@ hr{
 .specs{
   text-align: left;
   padding: 0 20rem;
+}
+
+/* Home */
+
+#artworks{
+  width:100%;
+  color:#868181;
 }
