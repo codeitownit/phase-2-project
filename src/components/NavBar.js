@@ -3,12 +3,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Search from './Search';
+import { Link } from "react-router-dom";
 
 function NavBar({art, setSearch}) {
   return (
+    
     <Navbar expand="lg" className=" navbar bg-body-tertiary" bg="dark" data-bs-theme="dark">
-      <Container fluid>
-        <Navbar.Brand href="#">Art Gallery</Navbar.Brand>
+      <Container fluid className='nav'>
+        <Navbar.Brand className='navbar-brand'href="#">Art Gallery</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -16,9 +18,12 @@ function NavBar({art, setSearch}) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Collections</Nav.Link>
-            <NavDropdown title="Categories" id="navbarScrollingDropdown">
+            <Nav.Link as={Link} to="/" className='nav-link' >Home</Nav.Link>
+            
+            
+            <Nav.Link as={Link} to="/artworks" className='nav-link'>ArtWorks</Nav.Link>
+         
+            <NavDropdown className='nav-link'title="Categories" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">action</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 Another action
@@ -32,6 +37,7 @@ function NavBar({art, setSearch}) {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
   );
 }
 
