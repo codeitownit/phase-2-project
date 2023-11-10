@@ -1,9 +1,9 @@
 import './App.css';
 import React,{useState, useEffect} from 'react';
-import ArtCollection from './components/pages/ArtCollection';
+import ArtCollection from './pages/ArtCollection';
 import NavBar from './components/NavBar';
-import Home from './components/pages/Home';
-import SingleArt from './components/pages/SingleArt';
+import Home from './pages/Home';
+import SingleArt from './pages/SingleArt';
 import {
   BrowserRouter as Router,
   Routes,
