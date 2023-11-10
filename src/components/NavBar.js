@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function NavBar({art, setSearch}) {
   return (
     
-    <Navbar expand="lg" className=" navbar bg-body-tertiary" bg="dark" data-bs-theme="dark">
+    <Navbar expand="lg" className=" navbar bg-body-tertiary" bg="light" data-bs-theme="light">
       <Container fluid className='nav'>
         <Navbar.Brand className='navbar-brand'href="#">Art Gallery</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -19,8 +19,6 @@ function NavBar({art, setSearch}) {
             navbarScroll
           >
             <Nav.Link as={Link} to="/" className='nav-link' >Home</Nav.Link>
-            
-            
             <Nav.Link as={Link} to="/artworks" className='nav-link'>ArtWorks</Nav.Link>
          
             <NavDropdown className='nav-link'title="Categories" id="navbarScrollingDropdown">

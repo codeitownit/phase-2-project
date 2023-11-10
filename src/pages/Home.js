@@ -33,10 +33,13 @@ function Home() {
     <div className='first-section'>
         <HomeCarousel />
         <hr/>
-        <p>Explore thousands of 
+        <br/>
+
+        <p><b>Explore thousands of 
             artworks in the museum’s collection—<br/>
             from our renowned icons to lesser-known works from every 
-            corner of the globe</p>
+            corner of the globe</b></p>
+
 
     </div>
 
@@ -73,7 +76,7 @@ function Home() {
                 <CardGroup>
         {collection.map((item) => (
            <Col onClick={()=>navigate(`/artworks/${item.id}`)} key={item.id} xs={6} md={3}>
-           <Card className="bot-card"style={{ width: '15rem', margin:'0'}}>
+           <Card className="art-card"style={{ width: '15rem', margin:'0'}}>
              <Card.Img variant="top" src={iiif_url + item.image_id + "/full/843,/0/default.jpg"} alt="image" />
              <Card.Body>
                <Card.Title>{item.title}</Card.Title>
