@@ -8,13 +8,13 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 
 function SingleArt({art, iiif_url}) {
-  const {artId} = useParams();
+  const {artId} = useParams(); //useParams to get and use id from url
   const[clickedArt, setClickedArt]=useState([]);
   const[loading, setLoading] = useState(false);
 
-  const navigate = useNavigate();
-// const explore = art.filter((item)=>(item.id!==artId))
-// console.log(explore)
+  const navigate = useNavigate(); //useNavigate hook
+
+  //fetches clicked art
  useEffect(()=>{
   setLoading(true)
   fetch( `https://api.artic.edu/api/v1/artworks/${artId}`)
@@ -33,6 +33,7 @@ function SingleArt({art, iiif_url}) {
   )
 
  }
+//  individual art component
  const ShowArt = () =>{
   return(
     <>

@@ -4,15 +4,16 @@ import Form from 'react-bootstrap/Form';
 import {useNavigate} from 'react-router-dom';
 
 
-
+//search component
 
 function Search({setSearch}) {
-  const[input, setInput]=useState("")
+  //stores the input value from the search input form on submit
+  const[input, setInput]=useState("") 
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); //useNavigate hook
 
-
-  return (
+//returns search form for searching art
+  return ( 
     <div>
         <Form className="d-flex"onSubmit={(e)=>{
     e.preventDefault()

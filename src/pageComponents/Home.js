@@ -15,14 +15,15 @@ function Home() {
   const iiif_url = "https://www.artic.edu/iiif/2/";
 
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); //useNavigate hook
 
-
+// exhibition section
   useEffect(() =>{
     fetch("https://api.artic.edu/api/v1/exhibitions?limit=2")
     .then(response=>response.json())
     .then(data=>setExibitions(data.data))
   })
+  //fetches artwork section
   useEffect(() =>{
     fetch("https://api.artic.edu/api/v1/artworks?style_ids=Impressionism?limit=16")
     .then(response=>response.json())
@@ -43,6 +44,7 @@ function Home() {
 
     </div>
 
+{/* exhibitions  */}
     <div className='second-section'>
         <Container>
         <div style={{ padding:' 0.5rem 16rem '}}>
@@ -65,6 +67,8 @@ function Home() {
   </Row>
 </Container>
      </div>
+
+     {/* artworks section */}
      <div>
      <Container id="#artworks">
         <div style={{ display:'flex', justifyContent:'space-between'}}>

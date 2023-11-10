@@ -4,12 +4,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import Search from './Search';
 import { Link } from "react-router-dom";
 
-
-function NavBar({art, setSearch}) {
+//returns navbar component
+function NavBar({art, setSearch}) {//props
   return (
     
     <Navbar expand="lg" className=" navbar bg-body-tertiary" bg="light" data-bs-theme="light">
       <Container fluid className='nav'>
+        {/* NavBar Logo */}
         <Navbar.Brand className='navbar-brand'href="/">Art Gallery</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -19,11 +20,12 @@ function NavBar({art, setSearch}) {
             navbarScroll
           >
              &nbsp;
-            
+            {/* Navbar links */}
             <Nav.Link as={Link} to="/" className='nav-link' >Home</Nav.Link>
             <Nav.Link as={Link} to="/artworks" className='nav-link'>The Collection</Nav.Link>
             <Nav.Link as={Link} to="/artworks" className='nav-link'>Exhibitions</Nav.Link>
           </Nav>
+          {/* NavBar Search */}
           <Search art={art} setSearch={setSearch}/>
         </Navbar.Collapse>
       </Container>
