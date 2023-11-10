@@ -28,9 +28,8 @@ function App() {
       <Router>
       <NavBar art={art} setSearch={setSearch}/>
       <Routes>
-        <Route path="/artworks" element={<ArtCollection art={art} iiif_url ={iiif_url} />} >
-          <Route path="artId" element={<SingleArt art={art} iiif_url ={iiif_url}/>} />
-          </Route>
+        <Route path="/artworks" element={<ArtCollection art={art} iiif_url ={iiif_url} />} />
+       <Route path="/artworks/:artId" element={<SingleArt art={art} iiif_url ={iiif_url}/>} />
         <Route exact path="/" element={<Home />} />
       </Routes>
       </Router>
