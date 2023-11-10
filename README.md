@@ -18,7 +18,7 @@ As a user I can:
 
 ## Live Demo
 
-Click [here](https://codeitownit.github.io/Phase-1-project "here") to view the app.
+Click [here](https://654e754377b78a009a8dbdf6--a8t-gallery.netlify.app/ "here") to view the app.
   
 
 
