@@ -4,8 +4,8 @@
 
 ## Demo
 
-![ Demo-when page loads](./assets/demo-art-museum.png "Art museum Demo")
-![ Demo-art details](./assets/art-details-demo.png "Art museum Demo")
+![ Demo-when page loads](./public/demo/demo-ArtGallery.png "Art Gallery Demo")
+![ Demo-art details](./assets/art-details-demo.png "Art Gallery Demo")
 
 
 This Project, Art Gallery, allows a user to view art pieces and search for art. This app uses the Art Institute of Chicago [Public API](https://api.artic.edu/docs "View Docs").
